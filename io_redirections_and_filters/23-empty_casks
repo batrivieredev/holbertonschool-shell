@@ -1,1 +1,2 @@
-find . -type f -size 0b -o -type d -empty | cut -d/ -f2- | sed 's/^/"/;s/$/"/'
+find . -type f -size 0b -o -type d -empty | cut -d/ -f2- > output
+sed 's/.*/"&"/' output
